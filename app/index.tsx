@@ -1,9 +1,7 @@
-import { Text, View } from "react-native";
+// app/onboarding/index.tsx
+import { Redirect } from "expo-router";
 
-export default function Index() {
-  return (
-    <View className="flex-1 justify-center items-center">
-      <Text className="text-5xl text-accent">Welcome!</Text>
-    </View>
-  );
+export default function OnboardingIndex() {
+  // immediately send anyone hitting /onboarding → /onboarding/step1
+  return <Redirect href="/onboarding/step1" />;
 }
