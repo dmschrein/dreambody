@@ -1,15 +1,7 @@
-import { Link } from "expo-router";
-import { Text, View } from "react-native";
+// app/onboarding/index.tsx
+import { Redirect } from "expo-router";
 
-/* Home page that can be routed to other pages
- * add quiz before hitting profile page
- */
-export default function Index() {
-  return (
-    <View className="flex-1 justify-center items-center">
-      <Text className="text-5xl text-accent">Welcome!</Text>
-      <Link href="/onboarding">Onboarding</Link>
-      <Link href="/workouts">Workouts</Link>
-    </View>
-  );
+export default function OnboardingIndex() {
+  // immediately send anyone hitting /onboarding → /onboarding/step1
+  return <Redirect href="/onboarding/step1" />;
 }
